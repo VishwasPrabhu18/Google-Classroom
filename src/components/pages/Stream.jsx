@@ -2,12 +2,13 @@ import React from 'react';
 import { GoInfo, GoKebabHorizontal } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 import { GMeet } from '../../assets';
+import AnnouncementCard from '../cards/AnnouncementCard';
 
 const Stream = () => {
   const banner = "bg-gradient-to-r from-fuchsia-500 to-cyan-500";
 
   return (
-    <div className='flex flex-col justify-center mx-36 my-9'>
+    <div className='flex flex-col justify-center mx-32 my-9'>
       {/* Banner */}
       <div className='relative'>
         <div className={`w-full h-60 ${banner} rounded-lg`}>
@@ -22,8 +23,8 @@ const Stream = () => {
       </div>
 
       {/* Gmeeet, Upcomming and  Info*/}
-      <div className='flex items-start gap-8 my-8'>
-        <div className='flex flex-col gap-7'>
+      <div className='flex items-start gap-6 my-8 w-full'>
+        <div className='flex flex-col gap-7 w-72'>
           <div className='rounded-lg border border-gray-300 p-4'>
             <div className='flex justify-between items-center gap-6 mb-2'>
               <div className='flex justify-center items-center gap-4'>
@@ -46,7 +47,9 @@ const Stream = () => {
           </div>
         </div>
 
-        <div>right</div>
+        <div className='w-full'>
+          <AnnouncementCard />
+        </div>
       </div>
     </div>
   )
