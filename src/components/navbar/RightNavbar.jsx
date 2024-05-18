@@ -4,63 +4,12 @@ import { FaRegCalendar, FaCaretDown, FaCaretRight, FaRegListAlt } from 'react-ic
 import { SlGraduation } from "react-icons/sl";
 import { IoSettingsOutline } from 'react-icons/io5';
 import { MdOutlineArchive } from 'react-icons/md';
-import { Class1 } from '../../assets';
+import { enrolled } from '../constants/dummyData';
 import { Link } from 'react-router-dom';
 
 const RightNavbar = ({ setMenuOpen, menuOpen }) => {
 
   const [arrowOpen, setArrowOpen] = useState(false);
-
-  const enrolled = [
-    {
-      id: 1,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Mathematics",
-      section: "8 A"
-    },
-    {
-      id: 2,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Science",
-      section: "8 B"
-    },
-    {
-      id: 3,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "English",
-      section: "8 C"
-    },
-    {
-      id: 4,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Social Studies",
-      section: "8 D"
-    },
-    {
-      id: 1,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Mathematics",
-      section: "8 A"
-    },
-    {
-      id: 2,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Science",
-      section: "8 B"
-    },
-    {
-      id: 3,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "English",
-      section: "8 C"
-    },
-    {
-      id: 4,
-      icon: <img src={Class1} alt='Class 1' className='w-9 h-9 rounded-full' />,
-      name: "Social Studies",
-      section: "8 D"
-    },
-  ];
 
   return (
     <div className={`${menuOpen ? "w-1/" : "w-[72px]"} fixed top-16 bottom-0 overflow-auto border-r-2 border-blue-100`}>
@@ -97,10 +46,10 @@ const RightNavbar = ({ setMenuOpen, menuOpen }) => {
                 menuOpen && (
                   enrolled.map((enroll, idx) => (
                     <div key={idx} className='px-5 flex justify-start items-center gap-1 hover:bg-slate-50 rounded-r-full mr-3'>
-                      {enroll.icon}
-                      <div className='flex-col px-5'>
-                        <p className='truncate'>{enroll.name}</p>
-                        <span>{enroll.section}</span>
+                      <img src={enroll.icon} alt="Class icon" className='w-10 h-10 rounded-full' />
+                      <div className='flex-col px-5 py-2 line-clamp-none'>
+                        <p className='truncate -mb-2'>{enroll.name}</p>
+                        <span className='text-sm'>{enroll.section}</span>
                       </div>
                     </div>
                   ))

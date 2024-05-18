@@ -62,7 +62,7 @@ const ClassCard = ({ item }) => {
             )}
         </div>
         <div className='absolute top-0 right-6 -mt-9'>
-          <img src={item.icon} alt='Class 1' className='w-16 h-16 rounded-full' />,
+          <img src={item.icon} alt='Class 1' className='w-16 h-16 rounded-full' />
         </div>
       </div>
 
