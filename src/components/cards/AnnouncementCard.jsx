@@ -18,9 +18,14 @@ const AnnouncementCard = () => {
     }
   }, [comments]);
 
+  const commentOpenHandler = () => {
+    setCommentOpen(!commentOpen);
+    setComments("");
+  }
+
   return (
     <div className='flex shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md bg-white px-4 py-3 hover:cursor-pointer'>
-      <div onClick={() => setCommentOpen(!commentOpen)} >
+      <div onClick={ commentOpenHandler} >
 
         <div className={`${commentOpen ? "hidden" : ""} flex justify-center items-center gap-2`}>
           <img src={Profile} alt="Profile" className='w-10 h-10 rounded-full mx-2' />
@@ -40,7 +45,7 @@ const AnnouncementCard = () => {
           </div>
 
           <div className='flex items-center gap-4'>
-            <button className='text-gray-500 px-3 py-1 rounded-md hover:bg-gray-100' onClick={() => setCommentOpen(!commentOpen)}>Cancel</button>
+            <button className='text-gray-500 px-3 py-1 rounded-md hover:bg-gray-100' onClick={commentOpenHandler}>Cancel</button>
             <button type='submit' disabled={!postBtnEnable} className={` px-5 py-1 rounded-md ${postBtnEnable ? "bg-blue-500 text-white hover:bg-blue-600" : "bg-gray-200"}`}>Post</button>
           </div>
         </div>

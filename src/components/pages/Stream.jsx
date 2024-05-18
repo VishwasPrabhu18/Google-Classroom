@@ -8,7 +8,7 @@ const Stream = () => {
   const banner = "bg-gradient-to-r from-fuchsia-500 to-cyan-500";
 
   return (
-    <div className='flex flex-col justify-center mx-32 my-9'>
+    <div className='flex flex-col justify-center mx-28 my-9'>
       {/* Banner */}
       <div className='relative'>
         <div className={`w-full h-60 ${banner} rounded-lg`}>
