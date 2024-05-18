@@ -4,7 +4,7 @@ import { enrolled } from '../constants/dummyData';
 
 const Home = () => {
   return (
-    <div className='grid md:grid-cols-3 grid-cols-1 2xl:grid-cols-4'>
+    <div className='grid md:grid-cols-3 grid-cols-1 2xl:grid-cols-4 pl-10'>
       {
         enrolled.map((item) => (
           <ClassCard key={item.id} item={item} />

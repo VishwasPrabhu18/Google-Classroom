@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ArchivedClasses, Calender, Home, Navbar, NotFound, RightNavbar, Settings } from './components/index.js';
+import {
+  ArchivedClasses,
+  Calender,
+  Class,
+  Classwork,
+  Home,
+  Navbar,
+  NotFound,
+  RightSidebar,
+  Settings,
+  Stream
+} from './components/index.js';
 
 const App = () => {
-  
+
   const [menuOpen, setMenuOpen] = useState(true);
 
   return (
@@ -11,15 +22,19 @@ const App = () => {
       <Navbar setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
       <div className='flex pt-16'>
         <div className={`${menuOpen ? "w-1/4" : "w-[72px]"}`}>
-          <RightNavbar setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+          <RightSidebar setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
         </div>
-        <div className={`${menuOpen ? "w-full -ml-2" : "ml-24"} pb-5`}>
+        <div className={`w-full ${menuOpen ? "-ml-12" : "ml-1"} pb-5`}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/calender' element={<Calender />} />
             <Route path='/archived-classes' element={<ArchivedClasses />} />
             <Route path='/settings' element={<Settings />} />
-            <Route path='/class/:id' element={<h1>Class</h1>} />
+            <Route element={<Class />}>   {/*path='/class/:id' */}
+              <Route path="/class/:id" element={<Stream />} />
+              <Route path="/class/:id/classwork" element={<Classwork />} />
+              <Route path="/class/:id/people" element={<h1>People</h1>} />
+            </Route>
             <Route path='/assignment/:id' element={<h1>Assignment</h1>} />
             <Route path='*' element={<NotFound />} />
           </Routes>
