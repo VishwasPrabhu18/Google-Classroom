@@ -37,7 +37,7 @@ const ClassCard = ({ item }) => {
   // }, []);
 
   return (
-    <div class="max-w-sm rounded-lg overflow-hidden border hover:shadow-lg w-80 cursor-pointer mt-7">
+    <div className="max-w-sm rounded-lg overflow-hidden border hover:shadow-lg w-80 cursor-pointer mt-7">
       <div className={`realtive w-full h-24 ${item.banner} flex justify-between`}>
         <div className='flex flex-col ml-5 mt-3'>
           <Link to={`/class/${item.id}`} className='hover:underline text-white flex flex-col'>
