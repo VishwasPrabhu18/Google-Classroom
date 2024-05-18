@@ -1,5 +1,6 @@
 export { default as ClassroomLogo } from "./classroom.svg";
 export { default as Profile } from "./profile.png";
+export { default as GMeet } from "./gmeet.png";
 
 export { default as Class1 } from "./class1.png";
 export { default as Class2 } from "./class2.png";

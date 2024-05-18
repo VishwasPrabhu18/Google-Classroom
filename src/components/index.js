@@ -10,6 +10,9 @@ export { default as Settings } from "./pages/Settings";
 export { default as ClassCard } from "./pages/ClassCard";
 export { default as Tasks } from "./pages/Tasks";
 
+export { default as AssignmentCard } from "./cards/AssignmentCard";
+export { default as CommentCard } from "./cards/CommentCard";
+
 export { default as Class } from "./pages/Class"
 export { default as Stream } from "./pages/Stream"
 export { default as Classwork } from "./pages/Classwork"
