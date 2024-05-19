@@ -6,6 +6,7 @@ import AnnouncementCard from '../cards/AnnouncementCard';
 import { Announcement } from '../constants/dummyData';
 import AnnounceCard from '../cards/AnnounceCard';
 import AnnounceLinkCard from '../cards/AnnounceLinkCard';
+import VerticalKabab from '../common/VerticalKabab';
 
 const Stream = () => {
   const banner = "bg-gradient-to-r from-fuchsia-500 to-cyan-500";
@@ -35,9 +36,8 @@ const Stream = () => {
                 <img src={GMeet} alt="GMeet" className='w-6 h-6' />
                 <h1 className='text-black font-semibold'>Meet</h1>
               </div>
-              <Link className='hover:bg-gray-200 h-10 w-10 rounded-full flex justify-center items-center ml-4'>
-                <GoKebabHorizontal className='rotate-90 text-black text-lg' />
-              </Link>
+              
+              <VerticalKabab id={1} />
             </div>
             <button className='bg-blue-600 w-full rounded text-white text-base font-semibold h-8'>Join</button>
           </div>

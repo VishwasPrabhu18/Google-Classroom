@@ -24,7 +24,7 @@ const AnnouncementCard = () => {
   }
 
   return (
-    <div className='flex shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-md bg-white px-4 py-3 hover:cursor-pointer'>
+    <div className='flex shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-lg bg-white px-4 py-3 hover:cursor-pointer'>
       <div onClick={ commentOpenHandler} >
 
         <div className={`${commentOpen ? "hidden" : ""} flex justify-center items-center gap-2`}>

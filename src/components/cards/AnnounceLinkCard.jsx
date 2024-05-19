@@ -19,7 +19,7 @@ const AnnounceLinkCard = ({ item }) => {
       </Link>
 
       <div className='relative'>
-        <VerticalKabab />
+        <VerticalKabab id={1}/>
       </div>
     </div>
   )

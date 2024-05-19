@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { GoKebabHorizontal } from 'react-icons/go';
 import { Link as MUILink, Menu, MenuItem } from '@mui/material';
 
-const VerticalKabab = () => {
+const VerticalKabab = ({id}) => {
   
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -23,9 +23,9 @@ const VerticalKabab = () => {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        className='hover:bg-blue-50 h-10 w-10 rounded-full flex justify-center items-center ml-4'
+        className={`${id === 1 ? "hover:bg-blue-50" : "hover:bg-gray-300"} h-10 w-10 rounded-full flex justify-center items-center ml-4`}
       >
-        <GoKebabHorizontal className='rotate-90 text-black text-lg ' />
+        <GoKebabHorizontal className={`rotate-90 ${id === 1 ? "text-black": "text-white"} text-lg`} />
       </MUILink>
       <Menu
         id="basic-menu"
@@ -38,7 +38,16 @@ const VerticalKabab = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleClose}><h1 className='text-sm w-20'>Copy Link</h1></MenuItem>
+        {
+          id === 1 ? (
+            <MenuItem onClick={handleClose}><h1 className='text-sm w-20'>Copy Link</h1></MenuItem>
+          ) : (
+            <>
+              <MenuItem onClick={handleClose}><h1 className='text-sm w-20'>Move</h1></MenuItem>
+              <MenuItem onClick={handleClose}><h1 className='text-sm w-20'>Unenroll</h1></MenuItem>
+            </>
+          )
+        }
       </Menu>
     </>
   )

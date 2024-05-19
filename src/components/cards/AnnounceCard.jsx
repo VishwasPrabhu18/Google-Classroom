@@ -2,8 +2,6 @@ import React from 'react';
 import { VerticalKabab, PdfRender, Comment } from "../index";
 
 const AnnounceCard = ({ item }) => {
-  // const content = item.content.replace(' ', '&nbsp;').replace('\n', `${<br />}`);
-
   return (
     <div className='w-full pt-4 rounded-lg border'>
       <div className='px-7'>
@@ -15,7 +13,7 @@ const AnnounceCard = ({ item }) => {
               <span className='text-xs'>{item.date}</span>
             </div>
           </div>
-          <VerticalKabab />
+          <VerticalKabab id={1} />
         </div>
 
         <div className='whitespace-pre-line mt-4'>

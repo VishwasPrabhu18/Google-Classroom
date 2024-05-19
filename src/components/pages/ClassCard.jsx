@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoKebabHorizontal } from "react-icons/go"
 import { Link } from 'react-router-dom'
-import { Tasks } from '../index'
+import { Tasks, VerticalKabab } from '../index'
 import { BsPersonSquare } from "react-icons/bs"
 import { RiFolder3Line } from "react-icons/ri"
 
@@ -47,9 +47,7 @@ const ClassCard = ({ item }) => {
           <span className='text-white mt-1 hover:underline w-fit'>{item.teacher}</span>
         </div>
         <div className='w-10 h-10 rounded-full hover:bg-gray-500 flex justify-center items-center mt-2 mr-2'>
-          <Link>
-            <GoKebabHorizontal className='rotate-90 text-white text-xl' />
-          </Link>
+          <VerticalKabab id={2} />
         </div>
       </div>
 
