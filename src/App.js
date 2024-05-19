@@ -35,6 +35,7 @@ const App = () => {
               <Route path="/class/:id/classwork" element={<Classwork />} />
               <Route path="/class/:id/people" element={<h1>People</h1>} />
             </Route>
+            <Route path="/class/:id/announcement-details" element={<h1>People</h1>} />
             <Route path='/assignment/:id' element={<h1>Assignment</h1>} />
             <Route path='*' element={<NotFound />} />
           </Routes>

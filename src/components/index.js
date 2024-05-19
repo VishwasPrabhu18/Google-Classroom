@@ -13,9 +13,15 @@ export { default as Tasks } from "./pages/Tasks";
 export { default as AssignmentCard } from "./cards/AssignmentCard";
 export { default as CommentCard } from "./cards/CommentCard";
 export { default as AnnouncementCard } from "./cards/AnnouncementCard";
+export { default as AnnounceLinkCard } from "./cards/AnnounceLinkCard";
+export { default as AnnounceCard } from "./cards/AnnounceCard";
 
 export { default as Class } from "./pages/Class"
 export { default as Stream } from "./pages/Stream"
 export { default as Classwork } from "./pages/Classwork"
+
+export { default as VerticalKabab } from "./common/VerticalKabab";
+export { default as PdfRender } from "./common/PdfRender";
+export { default as Comment } from "./common/Comment";
 
 export { default as NotFound } from "./pages/NotFound";

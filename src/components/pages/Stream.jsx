@@ -3,12 +3,15 @@ import { GoInfo, GoKebabHorizontal } from 'react-icons/go';
 import { Link } from 'react-router-dom';
 import { GMeet } from '../../assets';
 import AnnouncementCard from '../cards/AnnouncementCard';
+import { Announcement } from '../constants/dummyData';
+import AnnounceCard from '../cards/AnnounceCard';
+import AnnounceLinkCard from '../cards/AnnounceLinkCard';
 
 const Stream = () => {
   const banner = "bg-gradient-to-r from-fuchsia-500 to-cyan-500";
 
   return (
-    <div className='flex flex-col justify-center mx-28 my-9'>
+    <div className='flex flex-col justify-center mx-10 my-9'>
       {/* Banner */}
       <div className='relative'>
         <div className={`w-full h-60 ${banner} rounded-lg`}>
@@ -22,8 +25,9 @@ const Stream = () => {
         </div>
       </div>
 
-      {/* Gmeeet, Upcomming and  Info*/}
+      {/* Info*/}
       <div className='flex items-start gap-6 my-8 w-full'>
+        {/* Gmeeet and Upcomming */}
         <div className='flex flex-col gap-7 w-72'>
           <div className='rounded-lg border border-gray-300 p-4'>
             <div className='flex justify-between items-center gap-6 mb-2'>
@@ -47,8 +51,24 @@ const Stream = () => {
           </div>
         </div>
 
+        {/* Announcement and Classwork */}
         <div className='w-full'>
           <AnnouncementCard />
+
+          <div className='flex flex-col gap-4 mt-6'>
+            {
+              Announcement.map((item, idx) => (
+                item.title === "announceLink"
+                  ? (
+                    <AnnounceLinkCard item={item} />
+                  ) : item.title === "announce"
+                    ? (
+                      <AnnounceCard item={item} />
+                    ) : ""
+              )
+              )
+            }
+          </div>
         </div>
       </div>
     </div>

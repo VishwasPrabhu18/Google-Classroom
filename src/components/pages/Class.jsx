@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const Class = () => {
   return (
-    <div>
+    <div className=''>
       <ClassNavbar />
       <Outlet />
     </div>

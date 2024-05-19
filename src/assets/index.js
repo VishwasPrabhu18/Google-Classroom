@@ -22,3 +22,5 @@ export { default as Img7 } from "./img7.jpeg";
 export { default as Img8 } from "./img8.jpeg";
 export { default as Img9 } from "./img9.jpeg";
 export { default as Img10 } from "./img10.jpeg";
+
+export { default as ReactPdf } from "./React-Intro.pdf";

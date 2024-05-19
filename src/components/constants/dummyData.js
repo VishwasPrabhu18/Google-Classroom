@@ -1,4 +1,15 @@
-import { Class1, Class2, Class3, Class4, Class5, Class6, Class7, Class8, Class9 } from '../../assets';
+import {
+  Class1,
+  Class2,
+  Class3,
+  Class4,
+  Class5,
+  Class6,
+  Class7,
+  Class8,
+  Class9,
+  ReactPdf
+} from '../../assets';
 
 export const enrolled = [
   {
@@ -103,5 +114,47 @@ export const enrolled = [
     section: "8 D",
     teacher: "Mr. John Doe",
     tasks: [],
+  },
+];
+
+export const Announcement = [
+  {
+    id: 1234,
+    title: "announceLink",
+    type: "assignment",
+    teacher: "Mr. John Doe",
+    topic: "Technical Seminar Results",
+    date: "2021-09-30",
+  },
+  {
+    id: 1,
+    title: "announce",
+    teacher: "Mr. John Doe",
+    date: "2021-09-30",
+    profile: Class1,
+    content: "Hello, this is the announcement \n 1. Mr. Dev has been appointed as the new class teacher of 8 A. \n 2. The class test has been postponed to 5th October.",
+    attachment: [
+      {
+        id: 1,
+        link: ReactPdf,        
+      },
+    ],
+  },
+  {
+    id: 1234,
+    title: "announceLink",
+    type: "material",
+    teacher: "Mr. John Doe",
+    topic: "Technical Seminar Results",
+    date: "2021-09-30",
+  },
+  {
+    id: 2,
+    title: "announce",
+    teacher: "Mr. John Doe",
+    date: "2021-09-30",
+    profile: Class2,
+    content: "Hello, this is the announcement \n 1. Mr. Dev has been appointed as the new class teacher of 8 A. \n 2. The class test has been postponed to 5th October.",
+    attachment: [],
   },
 ];

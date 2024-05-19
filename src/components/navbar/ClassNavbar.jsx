@@ -22,7 +22,8 @@ const ClassNavbar = () => {
   };
   
   return (
-    <div className='flex justify-between items-center border-b px-8 overflow-hidden'>
+    <div className=''>
+      <div className='flex justify-between items-center border-b px-8 overflow-hidden'>
       <div className='flex items-center overflow-y-hidden'>
         <Link to="/class/1" onClick={() => handleActive("stream")} className={`h-12 pt-3 pb-3 px-6 font-medium hover:text-blue-600 hover:bg-gray-200 ${isActive.stream && "bg-blue-100 border-b-4 border-blue-600 text-blue-600"} overflow-hidden`}>
           Stream
@@ -46,6 +47,7 @@ const ClassNavbar = () => {
         <LiaGoogleDrive className='w-6 h-6' />
         </Link>
       </div>
+    </div>
     </div>
   )
 }
